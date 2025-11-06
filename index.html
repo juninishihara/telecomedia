@@ -15,40 +15,49 @@
   <button id="btn2">言語-英語・難易度-高</button>
   -->
 
-  <button id="btn1" class="campaign-btn">言語-日本語・難易度-中</button>
-  <button id="btn2" class="campaign-btn">言語-英語・難易度-高</button>
+  <button id="btn1" class="campaign-btn">言語-日本語・録音-オン</button>
+  <button id="btn2" class="campaign-btn">言語-日本語・録音-オフ</button>
+  <button id="btn3" class="campaign-btn">言語-英語・録音-オン</button>
+  <button id="btn4" class="campaign-btn">言語-英語・録音-オフ</button>
+  
 
   
   <p id="output"></p>
 
   <script>
     // グローバル変数の宣言（文字列用）
-    var var1 = "";
-    var var2 = "";
+    var queueName = "";
 
     // 表示更新関数
     function updateDisplay() {
       document.getElementById('output').textContent = 
-        `var1: ${var1}, var2: ${var2}`;
+        `キュー名: ${queueName}`;
     }
 
     // 共通イベントハンドラ
     function handleButtonClick(values) {
-      var1 = values[0];
-      var2 = values[1];
+      queueName = value;
       updateDisplay();
       
       // ZCC連携処理（例）
-      console.log('ZCCに送信:', { var1, var2 });
+      console.log('ZCCに送信:', queueName);
     }
 
     // イベントリスナー設定
     document.getElementById('btn1').addEventListener('click', () => {
-      handleButtonClick(["日本語", "中"]);
+      handleButtonClick("日本語-録音あり");
     });
 
     document.getElementById('btn2').addEventListener('click', () => {
-      handleButtonClick(["英語", "高"]);
+      handleButtonClick("日本語-録音なし");
+    });
+
+    document.getElementById('btn3').addEventListener('click', () => {
+      handleButtonClick("英語-録音あり");
+    });
+
+    document.getElementById('btn4').addEventListener('click', () => {
+      handleButtonClick("英語-録音なし");
     });
 
     // 初期表示
