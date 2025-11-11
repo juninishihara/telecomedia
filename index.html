@@ -14,12 +14,17 @@
   <button id="btn1">言語-日本語・難易度-中</button>
   <button id="btn2">言語-英語・難易度-高</button>
   -->
+<head>24時間365日</head>
+  <button id="btn1" class="campaign-btn">英語（米国）-録音あり</button>
+  <button id="btn2" class="campaign-btn">英語（米国）-録音なし</button>
+  <button id="btn3" class="campaign-btn">英語（英国）-録音あり</button>
+  <button id="btn4" class="campaign-btn">英語（英国）-録音なし</button>
 
-  <button id="btn1" class="campaign-btn">言語-日本語・録音-オン</button>
-  <button id="btn2" class="campaign-btn">言語-日本語・録音-オフ</button>
-  <button id="btn3" class="campaign-btn">言語-英語・録音-オン</button>
-  <button id="btn4" class="campaign-btn">言語-英語・録音-オフ</button>
-  
+<head>平日（月～金曜日）9:00～18:00</head>
+  <button id="btn5" class="campaign-btn">スペイン語-録音あり</button>
+  <button id="btn6" class="campaign-btn">スペイン語-録音なし</button>
+  <button id="btn7" class="campaign-btn">タイ語-録音あり</button>
+  <button id="btn8" class="campaign-btn">タイ語-録音なし</button>
 
   
   <p id="output"></p>
@@ -45,19 +50,35 @@
 
     // イベントリスナー設定
     document.getElementById('btn1').addEventListener('click', () => {
-      handleButtonClick("日本語-録音あり");
+      handleButtonClick("英語（米国）-録音あり");
     });
 
     document.getElementById('btn2').addEventListener('click', () => {
-      handleButtonClick("日本語-録音なし");
+      handleButtonClick("英語（米国）-録音なし");
     });
 
     document.getElementById('btn3').addEventListener('click', () => {
-      handleButtonClick("英語-録音あり");
+      handleButtonClick("英語（英国）-録音あり");
     });
 
     document.getElementById('btn4').addEventListener('click', () => {
-      handleButtonClick("英語-録音なし");
+      handleButtonClick("英語（英国）-録音なし");
+    });
+    
+    document.getElementById('btn5').addEventListener('click', () => {
+      handleButtonClick("スペイン語-録音あり");
+    });
+    
+    document.getElementById('btn6').addEventListener('click', () => {
+      handleButtonClick("スペイン語-録音なし");
+    });
+    
+    document.getElementById('btn7').addEventListener('click', () => {
+      handleButtonClick("タイ語-録音あり");
+    });
+    
+    document.getElementById('btn8').addEventListener('click', () => {
+      handleButtonClick("タイ語-録音なし");
     });
 
     // 初期表示
