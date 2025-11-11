@@ -31,6 +31,8 @@
   <script>
     // グローバル変数の宣言（文字列用）
     var queueName = "";
+    var lang = "";
+    var customerName = "";
 
     // 表示更新関数
     function updateDisplay() {
@@ -39,8 +41,10 @@
     }
 
     // 共通イベントハンドラ
-    function handleButtonClick(value) {
-      queueName = value;
+    function handleButtonClick(values) {
+      queueName = values[0];
+      lang = values[1];
+      customerName = values[2];
       updateDisplay();
       
       // ZCC連携処理（例）
@@ -49,35 +53,35 @@
 
     // イベントリスナー設定
     document.getElementById('btn1').addEventListener('click', () => {
-      handleButtonClick("英語（米国）-録音あり");
+      handleButtonClick(["英語（米国）-録音あり","en-US","顧客1"]);
     });
 
     document.getElementById('btn2').addEventListener('click', () => {
-      handleButtonClick("英語（米国）-録音なし");
+      handleButtonClick(["英語（米国）-録音なし","en-US","顧客2"]);
     });
 
     document.getElementById('btn3').addEventListener('click', () => {
-      handleButtonClick("英語（英国）-録音あり");
+      handleButtonClick(["英語（英国）-録音あり","en-GB","顧客3"]);
     });
 
     document.getElementById('btn4').addEventListener('click', () => {
-      handleButtonClick("英語（英国）-録音なし");
+      handleButtonClick(["英語（英国）-録音なし","en-GB","顧客4"]);
     });
     
     document.getElementById('btn5').addEventListener('click', () => {
-      handleButtonClick("スペイン語-録音あり");
+      handleButtonClick(["スペイン語-録音あり","es-MX","顧客5"]);
     });
     
     document.getElementById('btn6').addEventListener('click', () => {
-      handleButtonClick("スペイン語-録音なし");
+      handleButtonClick(["スペイン語-録音なし","es-MX","顧客6"]);
     });
     
     document.getElementById('btn7').addEventListener('click', () => {
-      handleButtonClick("タイ語-録音あり");
+      handleButtonClick(["タイ語-録音あり","ja-JP","顧客7"]);
     });
     
     document.getElementById('btn8').addEventListener('click', () => {
-      handleButtonClick("タイ語-録音なし");
+      handleButtonClick(["タイ語-録音なし","ja-JP","顧客8"]);
     });
 
     // 初期表示
