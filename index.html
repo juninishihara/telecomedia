@@ -32,26 +32,54 @@
   <div class="button-container">
     <button id="btn1" class="campaign-btn">英語-録音あり</button>
     <button id="btn2" class="campaign-btn">英語-録音なし</button>
+    <button id="btn3" class="campaign-btn">中国語-録音あり</button>
+    <button id="btn4" class="campaign-btn">中国語-録音なし</button>
+    <button id="btn5" class="campaign-btn">韓国語-録音あり</button>
+    <button id="btn6" class="campaign-btn">韓国語-録音なし</button>
   </div>
   
   <h2>平日（月～金曜日）9:00～18:00</h2>
   <div class="button-container">
-    <button id="btn5" class="campaign-btn">スペイン語-録音あり</button>
-    <button id="btn6" class="campaign-btn">スペイン語-録音なし</button>
-    <button id="btn7" class="campaign-btn">タイ語-録音あり</button>
-    <button id="btn8" class="campaign-btn">タイ語-録音なし</button>
+    <button id="btn7" class="campaign-btn">ポルトガル語-録音あり</button>
+    <button id="btn8" class="campaign-btn">ポルトガル語-録音なし</button>
+    <button id="btn9" class="campaign-btn">スペイン語-録音あり</button>
+    <button id="btn10" class="campaign-btn">スペイン語-録音なし</button>
+    <button id="btn11" class="campaign-btn">ベトナム語-録音あり</button>
+    <button id="btn12" class="campaign-btn">ベトナム語-録音なし</button>
+    <button id="btn13" class="campaign-btn">ロシア語-録音あり</button>
+    <button id="btn14" class="campaign-btn">ロシア語-録音なし</button>
+    <button id="btn15" class="campaign-btn">タイ語-録音あり</button>
+    <button id="btn16" class="campaign-btn">タイ語-録音なし</button>
+    <button id="btn17" class="campaign-btn">フランス語-録音あり</button>
+    <button id="btn18" class="campaign-btn">フランス語-録音なし</button>
+    <button id="btn19" class="campaign-btn">ネパール語-録音あり</button>
+    <button id="btn20" class="campaign-btn">ネパール語-録音なし</button>
+    <button id="btn21" class="campaign-btn">ヒンディー語-録音あり</button>
+    <button id="btn22" class="campaign-btn">ヒンディー語-録音なし</button>
+    <button id="btn23" class="campaign-btn">ミャンマー語-録音あり</button>
+    <button id="btn24" class="campaign-btn">ミャンマー語-録音なし</button>
+    <button id="btn25" class="campaign-btn">インドネシア語-録音あり</button>
+    <button id="btn26" class="campaign-btn">インドネシア語-録音なし</button>
+    <button id="btn27" class="campaign-btn">タガログ語-録音あり</button>
+    <button id="btn28" class="campaign-btn">タガログ語-録音なし</button>
+    <button id="btn29" class="campaign-btn">手話-録音あり</button>
+    <button id="btn30" class="campaign-btn">手話-録音なし</button>
+    <button id="btn31" class="campaign-btn">その他言語-録音あり</button>
+    <button id="btn32" class="campaign-btn">その他言語-録音なし</button>
   </div>
   
   <style>
   .button-container {
-    display: flex;
-    flex-direction: column; /* 縦方向に並べる */
-    gap: 8px;               /* ボタン間のスペース */
-    margin-bottom: 16px;    /* 次のセクションとの間隔 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 自動で2列にする */
+    gap: 8px 16px; /* 行・列の間隔 */
+    margin-bottom: 20px;
   }
   
   .campaign-btn {
-    width: 200px;           /* 必要ならボタン幅を指定 */
+    width: 100%;      /* 列幅いっぱいに伸ばす（任意） */
+    padding: 8px 12px;
+    font-size: 16px;
   }
   </style>
 
